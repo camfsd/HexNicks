@@ -49,6 +49,9 @@ public class ConfigValues {
   public Boolean              REQUIRE_ALPHANUMERIC;
   public Boolean              CHAT_FORMATTER;
   public String               CHAT_FORMAT;
+  public Boolean              JOIN_LEAVE_MESSAGES;
+  public String               JOIN_FORMAT;
+  public String               LEAVE_FORMAT;
   public Boolean              LEGACY_COLORS;
   public TextColor            DEFAULT_NICK_COLOR;
   public TextColor            DEFAULT_USERNAME_COLOR;
@@ -75,6 +78,9 @@ public class ConfigValues {
     REQUIRE_ALPHANUMERIC = HexNicks.core().getConfig().getBoolean("require-alphanumeric", false);
     CHAT_FORMATTER = HexNicks.core().getConfig().getBoolean("chat-formatter", false);
     CHAT_FORMAT = HexNicks.core().getConfig().getString("chat-format", "{displayname}: {message}");
+    JOIN_LEAVE_MESSAGES = HexNicks.core().getConfig().getBoolean("join-leave-messages", false);
+    JOIN_FORMAT = HexNicks.core().getConfig().getString("join-format", "{displayname} joined the game");
+    LEAVE_FORMAT = HexNicks.core().getConfig().getString("leave-format", "{displayname} left the game");
     LEGACY_COLORS = HexNicks.core().getConfig().getBoolean("legacy-colors", false);
     DEFAULT_NICK_COLOR = TextColor.fromHexString(HexNicks.core().getConfig().getString("default-nick-color", "#FFFFFF"));
     DEFAULT_USERNAME_COLOR = TextColor.fromHexString(HexNicks.core().getConfig().getString("default-username-color", "#FFFFFF"));

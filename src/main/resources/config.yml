@@ -24,6 +24,14 @@ chat-formatter: true
 # May also include {prefix} and {suffix} placeholders. These items will be pulled from Vault if it is hooked.
 chat-format: "<{displayname}> {message}"
 
+# Should the plugin alter the join/leave messages to include the nickname?
+# If enabled, HexNicks will reformat the default join/leave messages with the messages defined below.
+join-leave-messages: false
+
+# The format of join/leave messages. Must include {displayname} placeholder.
+join-format: "{displayname} joined the game"
+leave-format: "{displayname} left the game"
+
 # Whether to support legacy nicknames (&a, &l, etc.)
 legacy-colors: false
 
